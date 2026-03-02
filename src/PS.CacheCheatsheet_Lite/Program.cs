@@ -1,4 +1,11 @@
+using PS.CacheCheatsheet_Lite.Caching.KeyBuilder;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+
+builder.Services.AddScoped<ICacheKeyBuilder, HttpCacheKeyBuilder>();
+
 
 
 builder.Services.AddControllers();
