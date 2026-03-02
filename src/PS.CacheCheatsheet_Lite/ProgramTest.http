@@ -1,0 +1,25 @@
+@PS.CacheCheatsheet_Lite_HostAddress = http://localhost:5260
+
+### Get all products (cached)
+GET {{PS.CacheCheatsheet_Lite_HostAddress}}/api/product
+Accept: application/json
+
+### Get product by id 1 (cached)
+GET {{PS.CacheCheatsheet_Lite_HostAddress}}/api/product/1
+Accept: application/json
+
+### Get product by id 2 (cached)
+GET {{PS.CacheCheatsheet_Lite_HostAddress}}/api/product/2
+Accept: application/json
+
+### Get products by category Электроника (cached - sliding)
+GET {{PS.CacheCheatsheet_Lite_HostAddress}}/api/product/category/Электроника
+Accept: application/json
+
+### Get products by category Книги (cached - sliding)
+GET {{PS.CacheCheatsheet_Lite_HostAddress}}/api/product/category/Книги
+Accept: application/json
+
+### Get product not found (should NOT cache)
+GET {{PS.CacheCheatsheet_Lite_HostAddress}}/api/product/999
+Accept: application/json
