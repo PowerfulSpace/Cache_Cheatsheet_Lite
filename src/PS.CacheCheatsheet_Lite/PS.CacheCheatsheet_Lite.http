@@ -1,0 +1,6 @@
+@PS.CacheCheatsheet_Lite_HostAddress = http://localhost:5260
+
+GET {{PS.CacheCheatsheet_Lite_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
