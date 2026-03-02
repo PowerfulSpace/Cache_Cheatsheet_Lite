@@ -6,6 +6,11 @@ using PS.CacheCheatsheet_Lite.Caching.Redis;
 var builder = WebApplication.CreateBuilder(args);
 
 
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "localhost:6379";
+    options.InstanceName = "PS.CacheCheatsheet:";
+});
 
 builder.Services.AddScoped<ICacheService, RedisCacheService>();
 builder.Services.AddScoped<ICacheKeyBuilder, HttpCacheKeyBuilder>();
